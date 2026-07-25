@@ -4,6 +4,8 @@ A static, single-page marketing site for Meridian, a marketing consultancy. Plai
 
 **Live site:** https://terencesia.github.io/ClaudeProject/ (deployed automatically via GitHub Actions on every push to `main`)
 
+![Screenshot of the Meridian marketing site](assets/screenshot.png)
+
 ## Structure
 
 - `index.html` — page content: nav, hero, testimonials, contact form, footer
