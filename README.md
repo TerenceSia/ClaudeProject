@@ -1,6 +1,6 @@
 # Meridian Marketing Site
 
-A static, single-page marketing site for Meridian, a marketing consultancy. Plain HTML/CSS/JS — no framework, no build step, no package manager.
+A static, single-page marketing site for Meridian, a marketing consultancy, in a Scandinavian-inspired design (paper-neutral palette, pine/clay accents, hairline dividers). Plain HTML/CSS/JS — no framework, no build step, no package manager.
 
 **Live site:** https://terencesia.github.io/ClaudeProject/ (deployed automatically via GitHub Actions on every push to `main`)
 
@@ -8,9 +8,15 @@ A static, single-page marketing site for Meridian, a marketing consultancy. Plai
 
 ## Structure
 
-- `index.html` — page content: nav, hero, testimonials, contact form, footer
+- `index.html` — page content: nav (with mobile hamburger menu), hero, services, free growth audit offer, testimonials, contact form, footer. Includes SEO meta tags, Open Graph/Twitter tags, and JSON-LD structured data.
 - `styles.css` — all styling, driven by CSS custom properties defined in `:root`
-- `script.js` — smooth-scroll for anchor links + contact form handling (validation, submit state, FormSubmit submission)
+- `script.js` — mobile nav toggle, smooth-scroll for anchor links, and contact form handling (validation, submit state, FormSubmit submission)
+- `robots.txt` / `sitemap.xml` — crawler directives pointing at the live Pages URL
+- `assets/favicon.svg` — site favicon
+
+## Lead generation
+
+The site is built around a single conversion goal: get visitors to submit the enquiry form in exchange for a free 20-minute growth audit. The offer is introduced in the hero, expanded in a dedicated section, and echoed in the contact form's headline and button copy.
 
 ## Running locally
 

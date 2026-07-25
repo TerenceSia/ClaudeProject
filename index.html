@@ -3,96 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meridian Marketing Consultancy</title>
+<title>Meridian — Marketing Consultancy &amp; Free Growth Audit</title>
+<meta name="description" content="Meridian is a marketing consultancy that turns strategy into growth. Claim a free 20-minute growth audit and see three quick wins for your brand's positioning, performance, and content.">
+<link rel="canonical" href="https://terencesia.github.io/ClaudeProject/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meridian — Marketing Consultancy &amp; Free Growth Audit">
+<meta property="og:description" content="We partner with ambitious brands to turn strategy into growth. Claim a free 20-minute growth audit — no obligation.">
+<meta property="og:url" content="https://terencesia.github.io/ClaudeProject/">
+<meta property="og:site_name" content="Meridian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Meridian — Marketing Consultancy &amp; Free Growth Audit">
+<meta name="twitter:description" content="We partner with ambitious brands to turn strategy into growth. Claim a free 20-minute growth audit — no obligation.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Meridian",
+  "description": "Marketing consultancy partnering with ambitious brands on positioning, performance marketing, and growth strategy.",
+  "url": "https://terencesia.github.io/ClaudeProject/",
+  "email": "terence.sia@gmail.com",
+  "areaServed": "Worldwide",
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Free Growth Audit",
+    "description": "A free 20-minute growth audit covering channel review and three quick-win recommendations."
+  }
+}
+</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="nav">
   <div class="nav-inner">
-    <a href="#home" class="logo">Meridian</a>
-    <nav class="nav-links">
+    <a href="#home" class="logo">
+      <svg class="logo-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="13" cy="13" r="11.5" stroke="currentColor" stroke-width="1"/>
+        <ellipse cx="13" cy="13" rx="5" ry="11.5" stroke="currentColor" stroke-width="1"/>
+        <line x1="1.5" y1="13" x2="24.5" y2="13" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      Meridian
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
       <a href="#home">Home</a>
+      <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Free Audit</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <section id="home" class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">Marketing Consultancy</p>
-      <h1>Marketing That Moves the Needle</h1>
-      <p class="subheadline">We partner with ambitious brands to turn strategy into growth &mdash; from positioning to performance, we make every campaign count.</p>
-      <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Marketing Consultancy</p>
+        <h1>Marketing that moves the <em>needle</em>, not just the metrics.</h1>
+        <p class="subheadline">We partner with ambitious brands to turn strategy into growth &mdash; from positioning to performance, we make every campaign count.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Claim your free audit
+            <svg class="btn-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#services" class="btn btn-outline">What we do</a>
+        </div>
+        <p class="hero-note">20 minutes. No obligation. Real recommendations.</p>
+      </div>
+      <svg class="hero-graphic" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="210" cy="210" r="170" stroke="currentColor" stroke-width="1"/>
+        <ellipse cx="210" cy="210" rx="70" ry="170" stroke="currentColor" stroke-width="1"/>
+        <ellipse cx="210" cy="210" rx="130" ry="170" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <line x1="40" y1="210" x2="380" y2="210" stroke="currentColor" stroke-width="1"/>
+        <line x1="210" y1="40" x2="210" y2="380" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+        <circle class="clay" cx="210" cy="210" r="6" fill="currentColor"/>
+        <circle class="clay" cx="322" cy="130" r="4" fill="currentColor"/>
+      </svg>
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
-    <div class="section-inner">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial-grid">
+  <section id="services" class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What We Do</p>
+        <h2 id="services-heading">Four disciplines, one growth strategy</h2>
+        <p>We work across the full funnel so positioning, spend, and content pull in the same direction.</p>
+      </div>
 
-        <article class="testimonial-card">
-          <div class="avatar">JR</div>
-          <p class="quote">&ldquo;Meridian rebuilt our positioning from the ground up and our conversion rate doubled within a quarter. They think like partners, not vendors.&rdquo;</p>
-          <p class="client-name">Jordan Reyes</p>
-          <p class="client-role">VP Marketing, Northwind Retail</p>
+      <div class="services-grid">
+
+        <article class="service-card">
+          <svg class="service-icon" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="14" stroke="currentColor" stroke-width="1.2"/><circle cx="17" cy="17" r="7" stroke="currentColor" stroke-width="1.2"/><circle cx="17" cy="17" r="1.6" fill="currentColor"/></svg>
+          <h3>Positioning &amp; Strategy</h3>
+          <p>Sharpen who you're for and why you win, then build the plan that puts it into market.</p>
         </article>
 
-        <article class="testimonial-card">
-          <div class="avatar">AK</div>
-          <p class="quote">&ldquo;The team's data-driven approach to our campaigns cut our acquisition cost by 38% while improving lead quality. Genuinely impressive.&rdquo;</p>
-          <p class="client-name">Amara Klein</p>
-          <p class="client-role">Founder, Loft &amp; Vine</p>
+        <article class="service-card">
+          <svg class="service-icon" viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M5 26L13 16L19 21L29 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 8H29V15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Performance Marketing</h3>
+          <p>Media spend that's measured against pipeline, not vanity impressions, and optimized weekly.</p>
         </article>
 
-        <article class="testimonial-card">
-          <div class="avatar">TS</div>
-          <p class="quote">&ldquo;Clear communication, sharp strategic thinking, and results we could actually measure. Working with Meridian felt effortless.&rdquo;</p>
-          <p class="client-name">Theo Sanders</p>
-          <p class="client-role">CEO, Basecamp Outfitters</p>
+        <article class="service-card">
+          <svg class="service-icon" viewBox="0 0 34 34" fill="none" aria-hidden="true"><rect x="6" y="6" width="22" height="22" stroke="currentColor" stroke-width="1.2"/><line x1="6" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="14" y2="28" stroke="currentColor" stroke-width="1.2"/></svg>
+          <h3>Brand &amp; Content</h3>
+          <p>A visual and verbal identity your team can run with, backed by a content system that compounds.</p>
+        </article>
+
+        <article class="service-card">
+          <svg class="service-icon" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="12" stroke="currentColor" stroke-width="1.2"/><line x1="17" y1="17" x2="17" y2="9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="17" y1="17" x2="23" y2="20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <h3>Growth Audits</h3>
+          <p>A structured review of your current channels, surfaced as prioritized, actionable next steps.</p>
         </article>
 
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="section-inner narrow">
-      <h2>Let's Talk Growth</h2>
-      <p class="section-intro">Tell us a bit about your business and what you're looking to achieve. We'll be in touch within one business day.</p>
+  <section id="audit" class="section audit" aria-labelledby="audit-heading">
+    <div class="container audit-inner">
+      <div class="audit-copy">
+        <p class="eyebrow">Free, No Obligation</p>
+        <h2 id="audit-heading">Start with a free growth audit</h2>
+        <p>Not sure where the biggest opportunity is? Tell us about your business on the enquiry form and we'll come back with a short, honest read on where to focus first &mdash; before you spend a dollar with us.</p>
+        <ul class="audit-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            A review of your current positioning and active channels
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Three quick-win recommendations you can act on immediately
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5L6.5 12L13 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            A 20-minute call to walk through the findings together
+          </li>
+        </ul>
+      </div>
+      <div class="audit-card">
+        <p class="audit-card-label">Included, free</p>
+        <h3>Growth Audit</h3>
+        <p>Fill in the form once &mdash; we'll reply within one business day to schedule your call.</p>
+        <a href="#contact" class="btn btn-primary">
+          Claim your free audit
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Client Results</p>
+        <h2 id="testimonials-heading">What our clients say</h2>
+      </div>
+      <div class="testimonial-grid">
+
+        <article class="testimonial-card">
+          <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+          <p class="quote">Meridian rebuilt our positioning from the ground up and our conversion rate doubled within a quarter. They think like partners, not vendors.</p>
+          <div class="testimonial-person">
+            <div class="avatar">JR</div>
+            <div>
+              <p class="client-name">Jordan Reyes</p>
+              <p class="client-role">VP Marketing, Northwind Retail</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+          <p class="quote">The team's data-driven approach to our campaigns cut our acquisition cost by 38% while improving lead quality. Genuinely impressive.</p>
+          <div class="testimonial-person">
+            <div class="avatar">AK</div>
+            <div>
+              <p class="client-name">Amara Klein</p>
+              <p class="client-role">Founder, Loft &amp; Vine</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="quote-mark" aria-hidden="true">&ldquo;</p>
+          <p class="quote">Clear communication, sharp strategic thinking, and results we could actually measure. Working with Meridian felt effortless.</p>
+          <div class="testimonial-person">
+            <div class="avatar">TS</div>
+            <div>
+              <p class="client-name">Theo Sanders</p>
+              <p class="client-role">CEO, Basecamp Outfitters</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact" aria-labelledby="contact-heading">
+    <div class="container contact-inner">
+      <div class="contact-intro">
+        <p class="eyebrow">Get Started</p>
+        <h2 id="contact-heading">Claim your free growth audit</h2>
+        <p>Tell us a bit about your business and what you're looking to achieve. We'll reply within one business day to book your 20-minute call.</p>
+        <div class="contact-meta">
+          <span>Email</span>
+          <a href="mailto:terence.sia@gmail.com">terence.sia@gmail.com</a>
+        </div>
+      </div>
 
       <form id="enquiry-form" novalidate>
-        <div class="form-row">
-          <label for="name">Name <span class="required">*</span></label>
-          <input type="text" id="name" name="name" autocomplete="name">
-          <span class="field-error" data-error-for="name"></span>
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <span class="field-error" data-error-for="name"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="form-row full">
+            <label for="company">Company <span class="optional">(optional)</span></label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+
+          <div class="form-row full">
+            <label for="message">What are you looking to grow? <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <span class="field-error" data-error-for="message"></span>
+          </div>
         </div>
 
-        <div class="form-row">
-          <label for="email">Email <span class="required">*</span></label>
-          <input type="email" id="email" name="email" autocomplete="email">
-          <span class="field-error" data-error-for="email"></span>
-        </div>
-
-        <div class="form-row">
-          <label for="company">Company <span class="optional">(optional)</span></label>
-          <input type="text" id="company" name="company" autocomplete="organization">
-        </div>
-
-        <div class="form-row">
-          <label for="message">Message <span class="required">*</span></label>
-          <textarea id="message" name="message" rows="5"></textarea>
-          <span class="field-error" data-error-for="message"></span>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-submit">Send Enquiry</button>
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span class="btn-label">Claim your free audit</span>
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
         <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
       </form>
     </div>
@@ -101,7 +264,39 @@
 </main>
 
 <footer class="site-footer">
-  <p>&copy; 2026 Meridian Marketing Consultancy. All rights reserved.</p>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <svg class="logo-mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="13" cy="13" r="11.5" stroke="currentColor" stroke-width="1"/>
+            <ellipse cx="13" cy="13" rx="5" ry="11.5" stroke="currentColor" stroke-width="1"/>
+            <line x1="1.5" y1="13" x2="24.5" y2="13" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          Meridian
+        </a>
+        <p>A marketing consultancy for ambitious brands &mdash; positioning, performance, and content under one roof.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Site</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Free Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Get in touch</h3>
+        <ul>
+          <li><a href="mailto:terence.sia@gmail.com">terence.sia@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Meridian Marketing Consultancy. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>

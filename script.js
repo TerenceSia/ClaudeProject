@@ -1,18 +1,29 @@
 const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/terence.sia@gmail.com';
 
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     const target = document.querySelector(link.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth' });
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
 const form = document.getElementById('enquiry-form');
 const statusEl = document.getElementById('form-status');
 const submitBtn = form.querySelector('.btn-submit');
-const submitBtnDefaultText = submitBtn.textContent;
+const submitBtnLabel = submitBtn.querySelector('.btn-label');
+const submitBtnDefaultText = submitBtnLabel.textContent;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -68,14 +79,14 @@ form.addEventListener('submit', async (e) => {
   if (!validate()) return;
 
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending…';
+  submitBtnLabel.textContent = 'Sending…';
 
   const payload = {
     name: form.name.value.trim(),
     email: form.email.value.trim(),
     company: form.company.value.trim(),
     message: form.message.value.trim(),
-    _subject: 'New enquiry from Meridian website',
+    _subject: 'New growth audit request from Meridian website',
     _captcha: 'false',
   };
 
@@ -90,15 +101,15 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
-      showStatus('success', "Thanks — we've received your message and will be in touch within one business day.");
+      showStatus('success', "Thanks — we've received your request and will be in touch within one business day to schedule your free audit call.");
       form.reset();
     } else {
-      showStatus('error', 'Something went wrong sending your message. Please try again or email us directly.');
+      showStatus('error', 'Something went wrong sending your request. Please try again or email us directly.');
     }
   } catch (err) {
-    showStatus('error', 'Something went wrong sending your message. Please check your connection and try again.');
+    showStatus('error', 'Something went wrong sending your request. Please check your connection and try again.');
   } finally {
     submitBtn.disabled = false;
-    submitBtn.textContent = submitBtnDefaultText;
+    submitBtnLabel.textContent = submitBtnDefaultText;
   }
 });
