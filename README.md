@@ -10,7 +10,7 @@ A static, single-page marketing site for Meridian, a marketing consultancy. Plai
 
 - `index.html` — page content: nav, hero, testimonials, contact form, footer
 - `styles.css` — all styling, driven by CSS custom properties defined in `:root`
-- `script.js` — smooth-scroll for anchor links + contact form handling (validation, submit state, Formspree submission)
+- `script.js` — smooth-scroll for anchor links + contact form handling (validation, submit state, FormSubmit submission)
 
 ## Running locally
 
@@ -18,7 +18,7 @@ There's no build step — just open `index.html` directly in a browser.
 
 ## Contact form
 
-The form posts to [Formspree](https://formspree.io) via `fetch()`. Replace the placeholder `FORMSPREE_ENDPOINT` in `script.js` with a real Formspree form ID before submissions will succeed in production.
+The form posts to [FormSubmit](https://formsubmit.co) via `fetch()`, delivering enquiries to the address configured in `FORMSUBMIT_ENDPOINT` in `script.js`. FormSubmit requires a one-time confirmation: the first real submission to a given address triggers an activation email that must be clicked before further submissions are delivered.
 
 ## Customizing
 

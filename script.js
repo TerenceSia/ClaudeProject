@@ -1,5 +1,4 @@
-// Replace with your actual Formspree form ID
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/{YOUR_FORM_ID}';
+const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/terence.sia@gmail.com';
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -76,10 +75,12 @@ form.addEventListener('submit', async (e) => {
     email: form.email.value.trim(),
     company: form.company.value.trim(),
     message: form.message.value.trim(),
+    _subject: 'New enquiry from Meridian website',
+    _captcha: 'false',
   };
 
   try {
-    const response = await fetch(FORMSPREE_ENDPOINT, {
+    const response = await fetch(FORMSUBMIT_ENDPOINT, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
