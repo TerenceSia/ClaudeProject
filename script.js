@@ -1,4 +1,5 @@
 const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/terence.sia@gmail.com';
+const WHATSAPP_NUMBER = '6591683502';
 
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');
@@ -19,6 +20,49 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+const whatsappToggle = document.getElementById('whatsapp-toggle');
+const whatsappPanel = document.getElementById('whatsapp-panel');
+const whatsappClose = document.getElementById('whatsapp-panel-close');
+
+function openWhatsappPanel() {
+  whatsappPanel.hidden = false;
+  whatsappToggle.setAttribute('aria-expanded', 'true');
+}
+
+function closeWhatsappPanel() {
+  whatsappPanel.hidden = true;
+  whatsappToggle.setAttribute('aria-expanded', 'false');
+}
+
+whatsappToggle.addEventListener('click', () => {
+  if (whatsappPanel.hidden) {
+    openWhatsappPanel();
+  } else {
+    closeWhatsappPanel();
+  }
+});
+
+whatsappClose.addEventListener('click', closeWhatsappPanel);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !whatsappPanel.hidden) closeWhatsappPanel();
+});
+
+document.addEventListener('click', (e) => {
+  if (whatsappPanel.hidden) return;
+  if (e.target.closest('.whatsapp-widget')) return;
+  closeWhatsappPanel();
+});
+
+document.querySelectorAll('.whatsapp-quick-reply').forEach((button) => {
+  button.addEventListener('click', () => {
+    const message = button.dataset.message || '';
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener');
+    closeWhatsappPanel();
+  });
+});
+
 const form = document.getElementById('enquiry-form');
 const statusEl = document.getElementById('form-status');
 const submitBtn = form.querySelector('.btn-submit');
@@ -26,6 +70,12 @@ const submitBtnLabel = submitBtn.querySelector('.btn-label');
 const submitBtnDefaultText = submitBtnLabel.textContent;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function speakConfirmation(text) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+}
 
 function setFieldError(fieldName, message) {
   const errorEl = form.querySelector(`[data-error-for="${fieldName}"]`);
@@ -101,7 +151,8 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
-      showStatus('success', "Thanks — we've received your request and will be in touch within one business day to schedule your free audit call.");
+      showStatus('success', "Thanks — we've received your request and will be in touch within 3 business days to schedule your free audit call.");
+      speakConfirmation('Thank you for your submission. We will get back in 3 business days.');
       form.reset();
     } else {
       showStatus('error', 'Something went wrong sending your request. Please try again or email us directly.');

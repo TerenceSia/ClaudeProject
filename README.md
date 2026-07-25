@@ -8,9 +8,9 @@ A static, single-page marketing site for Meridian, a marketing consultancy, in a
 
 ## Structure
 
-- `index.html` — page content: nav (with mobile hamburger menu), hero, services, free growth audit offer, testimonials, contact form, footer. Includes SEO meta tags, Open Graph/Twitter tags, and JSON-LD structured data.
+- `index.html` — page content: nav (with mobile hamburger menu), hero, services, free growth audit offer, testimonials, contact form, floating WhatsApp chat widget, footer. Includes SEO meta tags, Open Graph/Twitter tags, and JSON-LD structured data.
 - `styles.css` — all styling, driven by CSS custom properties defined in `:root`
-- `script.js` — mobile nav toggle, smooth-scroll for anchor links, and contact form handling (validation, submit state, FormSubmit submission)
+- `script.js` — mobile nav toggle, smooth-scroll for anchor links, WhatsApp widget toggle/quick-replies, and contact form handling (validation, submit state, FormSubmit submission)
 - `robots.txt` / `sitemap.xml` — crawler directives pointing at the live Pages URL
 - `assets/favicon.svg` — site favicon
 
@@ -25,6 +25,10 @@ There's no build step — just open `index.html` directly in a browser.
 ## Contact form
 
 The form posts to [FormSubmit](https://formsubmit.co) via `fetch()`, delivering enquiries to the address configured in `FORMSUBMIT_ENDPOINT` in `script.js`. FormSubmit requires a one-time confirmation: the first real submission to a given address triggers an activation email that must be clicked before further submissions are delivered.
+
+## WhatsApp widget
+
+A floating button in the bottom-right corner opens a small panel with a few suggested queries (free audit, general question, schedule a call, request a quote). Selecting one opens `https://wa.me/<number>?text=...` in a new tab with that message pre-filled. The number is set via `WHATSAPP_NUMBER` in `script.js`.
 
 ## Customizing
 
